@@ -13,10 +13,7 @@
   (route/resources "/")
   (route/not-found "Page not found"))
 
-#_(defroutes app-routes
-  (GET "/" [] "Hello World")
-  (route/resources "/")
-  (route/not-found "Not Found"))
-
 (def app
-  (handler/site app-routes))
+  (-> (handler/api app-routes)
+      (middleware/wrap-json-body)
+      (middleware/wrap-json-response)))
