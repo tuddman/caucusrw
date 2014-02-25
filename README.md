@@ -1,6 +1,8 @@
 # caucusrw
 
-FIXME
+Caucus is an open-source, web-based eLearning and discussion platform.
+
+re-written and enhanced through clojure.
 
 ## Prerequisites
 
