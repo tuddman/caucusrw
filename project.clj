@@ -15,8 +15,8 @@
                  [com.facebook/react "0.8.0.1"]]
 
 
-  :plugins [[lein-cljsbuild "1.0.1"]
-            [lein-ring "0.8.7"]
+  :plugins [[lein-cljsbuild "1.0.2"]
+            [lein-ring "0.8.10"]
             [lein-pdo "0.1.1"]]
 
   :aliases {"up" ["pdo" "cljsbuild" "auto" "dev," "ring" "server-headless"]}
@@ -29,15 +29,17 @@
 
   :source-paths ["src/clj"]
 
+  :hooks [leiningen.cljsbuild]
+
   :cljsbuild {:builds [{:id "dev"
                         :source-paths ["src/cljs"]
-                        :compiler {:output-to "resources/public/js/app.js"
+                        :compiler {:output-to "resources/public/js/caucusrw.js"
                                    :output-dir "resources/public/js/out"
                                    :optimizations :none
                                    :source-map true}}
                        {:id "release"
                         :source-paths ["src/cljs"]
-                        :compiler {:output-to "resources/public/js/app.js"
+                        :compiler {:output-to "resources/public/js/caucusrw.js"
                                    :optimizations :advanced
                                    :pretty-print false
                                    :preamble ["react/react.min.js"]

@@ -6,6 +6,8 @@
 (defdb mysql-db-korma (mysql {:db "caucus_test"
                               :user "caucus"
                               :password "caucuspw"}))
+
+
 ;; defentities
 
 (defentity assignments)
@@ -40,17 +42,61 @@
 (defentity user_info)
 
 
+
+;; ************
 ;; SELECTORS
 
+
+(select assignments)
+(select conf_has_items)
+(select confhidden)
+(select configuration)
+(select conforder)
+(select confs)
+(select events)
+(select grade_scores)
+(select grade_tasks)
+(select grouprules)
+(select groups)
+(select items)
+(select name_cascade)
+(select nums)
+(select quiz)
+(select quizanswers)
+(select quizmap)
+(select quizproblems)
+(select quizscore)
+(select resps)
+(select resps_seen)
+(select site_data)
+(select task_cats)
+(select task_links)
+(select tasks)
+(select user_columns)
+(select user_data)
+(select user_iface)
+(select user_in_conf)
 (select user_info)
 
+
+;; SELECT USERS
+
+(select user_info
+  (fields :userid :lname :fname))
+;; executes: SELECT users.usersname, users.id FROM user_info
+
+
+
+
+
+;; ************
+;; Retreival
 
 (defn get-user [userid]
   (first (select user_info
                  (where {:userid userid})
                  (limit 1))))
 
-#_(get-user "studd")
 
 
 ;; CREATE
