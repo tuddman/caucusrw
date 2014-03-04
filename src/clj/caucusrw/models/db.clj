@@ -3,15 +3,15 @@
         [korma.db]))
 
 
-(defdb mysql-db-korma (mysql {:db "caucus_test"
+(defdb mysql-db-korma (mysql {:db "caucus_local"
                               :user "caucus"
                               :password "caucuspw"}))
 
 
 ;; defentities
+;;  Caucus version 5.138.211
 
 (defentity assignments)
-(defentity conf_has_items)
 (defentity confhidden)
 (defentity configuration)
 (defentity conforder)
@@ -21,16 +21,18 @@
 (defentity grade_tasks)
 (defentity grouprules)
 (defentity groups)
+(defentity ip2latlong)
 (defentity items)
 (defentity name_cascade)
-(defentity nums)
+(defentity object2object)
 (defentity quiz)
 (defentity quizanswers)
 (defentity quizmap)
 (defentity quizproblems)
 (defentity quizscore)
-(defentity resps)
 (defentity resps_seen)
+(defentity sequence_confs)
+(defentity sequence_grouprules)
 (defentity site_data)
 (defentity task_cats)
 (defentity task_links)
@@ -40,7 +42,7 @@
 (defentity user_iface)
 (defentity user_in_conf)
 (defentity user_info)
-
+(defentity usersip2latlong)
 
 
 ;; ************
@@ -48,7 +50,6 @@
 
 
 (select assignments)
-(select conf_has_items)
 (select confhidden)
 (select configuration)
 (select conforder)
@@ -58,16 +59,18 @@
 (select grade_tasks)
 (select grouprules)
 (select groups)
+(select ip2latlong)
 (select items)
 (select name_cascade)
-(select nums)
+(select object2object)
 (select quiz)
 (select quizanswers)
 (select quizmap)
 (select quizproblems)
 (select quizscore)
-(select resps)
 (select resps_seen)
+(select sequence_confs)
+(select sequence_grouprules)
 (select site_data)
 (select task_cats)
 (select task_links)
@@ -77,6 +80,7 @@
 (select user_iface)
 (select user_in_conf)
 (select user_info)
+(select usersip2latlong)
 
 
 ;; SELECT USERS

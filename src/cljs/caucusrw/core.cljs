@@ -13,12 +13,12 @@
 (def app-state
   (atom
     {:contacts
-     [{:first "Ben" :last "Bitdiddle" :email "benb@mit.edu"}
-      {:first "Alyssa" :middle-initial "P" :last "Hacker" :email "aphacker@mit.edu"}
-      {:first "Eva" :middle "Lu" :last "Ator" :email "eval@mit.edu"}
-      {:first "Louis" :last "Reasoner" :email "prolog@mit.edu"}
-      {:first "Cy" :middle-initial "D" :last "Effect" :email "bugs@mit.edu"}
-      {:first "Lem" :middle-initial "E" :last "Tweakit" :email "morebugs@mit.edu"}]}))
+     [{:first "Ben" :last "Bitdiddle" :email "benb@mit.edu" :grade 12 :school "NOAA"}
+      {:first "Alyssa" :middle-initial "P" :last "Hacker" :email "aphacker@mit.edu" :grade 12 :school "NOAA"}
+      {:first "Eva" :middle "Lu" :last "Ator" :email "eval@mit.edu" :grade 12 :school "NOAA"}
+      {:first "Louis" :last "Reasoner" :email "prolog@mit.edu" :grade 12 :school "NOAA"}
+      {:first "Cy" :middle-initial "D" :last "Effect" :email "bugs@mit.edu" :grade 12 :school "NOAA"}
+      {:first "Lem" :middle-initial "E" :last "Tweakit" :email "morebugs@mit.edu" :grade 12 :school "NOAA"}]}))
 
 
 
